@@ -429,7 +429,7 @@ footer{position:relative;z-index:2;border-top:1px solid rgba(200,168,75,.1);padd
     <a href="#ai">AI Engine</a>
     <a href="#report">Report</a>
     <a href="#who">For Whom</a>
-    <a href="assessment.html" class="nav-cta">Start Free Test</a>
+    <a href="https://inwangai.com/register" class="nav-cta">Start Free Test</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -446,7 +446,7 @@ footer{position:relative;z-index:2;border-top:1px solid rgba(200,168,75,.1);padd
   <a href="#report" class="mm-link">Report</a>
   <a href="#who" class="mm-link">For Whom</a>
   <a href="#reviews" class="mm-link">Reviews ⭐</a>
-  <a href="assessment.html" class="mm-cta">Start Free Test</a>
+  <a href="https://inwangai.com/register" class="mm-cta">Start Free Test</a>
 </div>
 
 <!-- HERO -->
@@ -467,11 +467,11 @@ footer{position:relative;z-index:2;border-top:1px solid rgba(200,168,75,.1);padd
       </h1>
       <p class="hero-sub">INWANG combines advanced AI assessment with expert human mentorship — precision career guidance from Class 9 to Corporate. Built for Tier-2 &amp; Tier-3 India.</p>
       <div class="hero-btns">
-        <a href="assessment.html" class="btn-primary">Apna Career Discover Karo →</a>
+        <a href="https://inwangai.com/register" class="btn-primary">Apna Career Discover Karo →</a>
         <a href="#how" class="btn-secondary">How It Works ↓</a>
       </div>
       <div class="hero-stats">
-        <div class="stat-item"><div class="stat-num">11<span>+</span></div><div class="stat-lbl">Career Clusters</div></div>
+        <div class="stat-item"><div class="stat-num">20<span>+</span></div><div class="stat-lbl">Career Clusters</div></div>
         <div class="stat-item"><div class="stat-num">6<span>D</span></div><div class="stat-lbl">AI Dimensions</div></div>
         <div class="stat-item"><div class="stat-num">100<span>%</span></div><div class="stat-lbl">Human Verified</div></div>
         <div class="stat-item"><div class="stat-num">₹149</div><div class="stat-lbl">Full Report</div></div>
@@ -609,7 +609,7 @@ footer{position:relative;z-index:2;border-top:1px solid rgba(200,168,75,.1);padd
   <div class="cta-title reveal">Your Career.<br><span>Starts Here.</span></div>
   <p class="cta-sub reveal">Join students across Tier-2 & Tier-3 India discovering their true career direction with INWANG AI.</p>
   <div class="reveal">
-    <a href="assessment.html" class="btn-primary">Apna Career Discover Karo →</a>
+    <a href="https://inwangai.com/register" class="btn-primary">Apna Career Discover Karo →</a>
   </div>
   <div class="cta-note">Free assessment · No credit card · Results in minutes</div>
 </section>
@@ -758,6 +758,55 @@ footer{position:relative;z-index:2;border-top:1px solid rgba(200,168,75,.1);padd
 </section>
 
 <!-- FOOTER -->
+
+<!-- DOWNLOAD REPORT SECTION -->
+<section id="download-report" style="background:linear-gradient(135deg,#020408,#0a1929);padding:80px 20px;text-align:center">
+  <div style="max-width:500px;margin:0 auto">
+    <div style="font-size:11px;font-weight:700;color:#c8a84b;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">ALREADY PAID?</div>
+    <h2 style="font-size:28px;font-weight:800;color:#fff;margin-bottom:8px">Download Your Report</h2>
+    <p style="font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:32px">Apna INWANG ID enter karo aur full career report access karo</p>
+    
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(200,168,75,0.2);border-radius:16px;padding:32px">
+      <div style="margin-bottom:16px">
+        <input type="text" id="downloadId" placeholder="Enter your INWANG ID (e.g. IA-26-00015)" 
+          style="width:100%;background:#071428;border:1px solid rgba(200,168,75,0.3);border-radius:10px;padding:14px 16px;font-size:14px;color:#fff;font-family:inherit;outline:none;box-sizing:border-box"
+          onkeydown="if(event.key==='Enter')downloadReport()">
+      </div>
+      <button onclick="downloadReport()" 
+        style="width:100%;background:linear-gradient(135deg,#c8a84b,#e8c96d);color:#020408;padding:14px;border:none;border-radius:10px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit">
+        📊 Report Access Karo →
+      </button>
+      <div id="downloadErr" style="color:#e74c3c;font-size:12px;margin-top:10px;display:none"></div>
+    </div>
+    
+    <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:16px">
+      INWANG ID aapke registration confirmation email mein hai
+    </p>
+  </div>
+</section>
+
+<script>
+function downloadReport(){
+  var id = document.getElementById('downloadId').value.trim().toUpperCase();
+  var err = document.getElementById('downloadErr');
+  err.style.display = 'none';
+  
+  if(!id){
+    err.textContent = 'INWANG ID enter karo';
+    err.style.display = 'block';
+    return;
+  }
+  
+  if(!id.startsWith('IA-')){
+    err.textContent = 'Valid INWANG ID enter karo (e.g. IA-26-00015)';
+    err.style.display = 'block';
+    return;
+  }
+  
+  // Redirect to report page
+  window.open('https://inwangai.com/report?id=' + encodeURIComponent(id) + '&paid=true', '_blank');
+}
+</script>
 <footer>
   <div class="footer-top">
     <div class="footer-col1">
@@ -771,7 +820,7 @@ footer{position:relative;z-index:2;border-top:1px solid rgba(200,168,75,.1);padd
       <a href="#ai" class="fc-link">AI Engine</a>
       <a href="#report" class="fc-link">Career Report</a>
       <a href="#who" class="fc-link">For Whom</a>
-      <a href="assessment.html" class="fc-link">Free Assessment</a>
+      <a href="https://inwangai.com/register" class="fc-link">Free Assessment</a>
     </div>
     <div class="footer-col2">
       <div class="fc-title">Legal</div>
